@@ -11,7 +11,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-
 func GetCurrentStatus(c *gin.Context) {
 	var request struct {
 		UserEmail         string `json:"userEmail"`
@@ -39,7 +38,7 @@ func GetCurrentStatus(c *gin.Context) {
 		"statusCode": "200",
 		"isError":    false,
 		"message":    "SUCCESS",
-		"dataResponse": status,
+		"data":       status,
 	})
 }
 
@@ -96,7 +95,7 @@ func SendRealtimeLocation(c *gin.Context) {
 		"statusCode": "200",
 		"isError":    false,
 		"message":    "SUCCESS",
-		"dataResponse": gin.H{
+		"data": gin.H{
 			"userEmail":         request.UserEmail,
 			"userName":          request.UserName,
 			"longitudeLocation": request.LongitudeLocation,

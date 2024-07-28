@@ -73,7 +73,7 @@ func GetCurrentStatus(userEmail, longitudeLocation, latitudeLocation string) (Di
 
 	disasterStatus := DisasterStatus{
 		LocationName:       locationName,
-		StatusLocation:     "Active", // Replace with actual status
+		StatusLocation:     "Danger", // Replace with actual status
 		StatusDisasterCode: statusDisasterCode,
 		SendRescueStatus:   sendRescueStatus,
 		DisasterName:       "Gempa Bumi",
